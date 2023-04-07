@@ -2,17 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Background from './Images/Background.png';
-import ProfileImage from './Images/Profile.jpeg'; 
 
 import Contact from './Contact.js';
-
-
+import Logo from './Logo.js';
+import Slogan from './Slogan.js';
+import Spinning from './Spinning.js';
 
 function App() {
   return (
     <Wrapper>
+      <Logo />
+      <Slogan /> 
       <Contact />
-      <Image src={ProfileImage} />
+      <Spinning />
     </Wrapper>
   );
 }
@@ -25,11 +27,8 @@ const Wrapper = styled.div`
   height: 100vh;
   background-size: cover;
   background-position: bottom;
-`
-const Image = styled.img`
-  border-radius: 50%;
-  width: 15%;
-  height: auto;
-  float: right; 
-  margin: 2%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `

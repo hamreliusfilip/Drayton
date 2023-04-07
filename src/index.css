@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* { 
+  transition: all 0.3s ease-in-out;
+}
+
+@font-face{ 
+  font-family: 'BarlowBold'; 
+  src: local('Barlow'),
+  url('./fonts/Barlow.ttf') format('truetype');
+  font-weight: 500; 
+}
+
+@font-face{ 
+  font-family: 'HelveticaAll'; 
+  src: local('Helvetica'),
+  url('./fonts/Helvetica.ttf') format('truetype');
+  font-weight: 500; 
+}
