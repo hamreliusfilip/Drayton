@@ -17,7 +17,7 @@ function Contact() {
 
     return (
         <Wrapper>
-            <LogoWrapper>
+            <div>
                 <StyledA href="https://www.linkedin.com/in/henrik-sporje-61803011/" target="_blank">
                     <Logo src={Linkedin} />
                 </StyledA>
@@ -29,8 +29,8 @@ function Contact() {
                 <Button onClick={handleCopyClick}>
                     <Logo src={Phone} />
                 </Button>
-                <Prompt> {isCopied ? 'Copied' : ''} </Prompt>
-            </LogoWrapper>
+                <Prompt>{isCopied ? 'COPIED TO CLIPBOARD' : 'COPY TO CLIPBOARD'}</Prompt>
+            </div>
         </Wrapper>
     )
 }
@@ -42,20 +42,22 @@ const Wrapper = styled.div`
     align-items: center;
     margin-top: 8%;
 ` 
-
 const Prompt = styled.p`
-    color: black; 
-    font-family: Helvetica;
-    font-size: 1em;
+    display: none;
+    position: fixed;
+    color: #1557FF;
+    font-family: BarlowBold;
     font-weight: 400;
+    margin-top: -8%;
+    margin-left: 14%;
 `
 const Button = styled.button`
     all: unset;
     cursor: pointer;
-`
-const LogoWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
+
+    &:hover + ${Prompt} {
+        display: block;
+    }
 `
 const Logo = styled.img`
     width: 3em;
@@ -71,6 +73,4 @@ const Logo = styled.img`
 `
 const StyledA = styled.a`
     postion: relative;
-`   
-
-
+`

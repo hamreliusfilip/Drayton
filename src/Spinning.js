@@ -25,7 +25,7 @@ const spin = keyframes`
 `;
 
 const CircleText = styled.div`
-position: fixed;
+position: absolute;
 width: 175px;
 height: 175px;
 margin: 0 auto;
@@ -33,6 +33,11 @@ animation: ${spin} 5s linear infinite;
 
 margin-left: 80%;
 margin-top: 2%;
+
+@media (max-width: 1000px) {
+  ease: 0.5s;
+  display: none;
+}
 `;
 
 const TextPath = styled.path`
