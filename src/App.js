@@ -32,4 +32,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  @media (max-width: 1000px) {
+    background-image: none;
+    background-color: #DEDEDE;
+  }
 `;
