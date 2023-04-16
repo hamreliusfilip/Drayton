@@ -19,15 +19,22 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 560px;
+  max-width: 400px;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 1%;
+
+  margin-left: 50%;
+
+  @media (max-width: 1000px) {
+    margin-left: 0%;
+    margin-top: 15%;
+}
 `;
 
 const SloganText = styled.p`
   color: black;
   font-family: HelveticaAll;
-  font-size: 2.1em;
+  font-size: 1.5em;
   font-weight: bold;
   word-wrap: break-word;
   word-break: break-word;

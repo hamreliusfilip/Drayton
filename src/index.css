@@ -29,3 +29,10 @@ code {
   url('./fonts/Helvetica.ttf') format('truetype');
   font-weight: 500; 
 }
+
+@font-face{ 
+  font-family: 'LED'; 
+  src: local('LED'),
+  url('./fonts/LED.ttf') format('truetype');
+  font-weight: 500; 
+}

@@ -37,19 +37,30 @@ function Contact() {
 export default Contact; 
 
 const Wrapper = styled.div`
+    position: absolute;
+    top: 1%;
+    right: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8%;
-` 
+
+    @media (max-width: 1000px) {
+        position: fixed;
+        top: 80%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        white-space: nowrap;
+    }
+`;
+
 const Prompt = styled.p`
     display: none;
     position: fixed;
     color: #1557FF;
     font-family: BarlowBold;
     font-weight: 400;
-    margin-top: -8%;
-    margin-left: 14%;
+    top: 70px;
+    right: 43px;
 `
 const Button = styled.button`
     all: unset;
@@ -63,8 +74,7 @@ const Logo = styled.img`
     width: 3em;
     height: auto;
     cursor: pointer;
-    padding: 0.5em;
-    padding: 30px;
+    padding: 15px;
 
 &:hover {
     transform: scale(1.1);

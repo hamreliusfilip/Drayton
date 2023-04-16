@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Background from './Images/Background.png';
-
 import Contact from './Contact.js';
 import Logo from './Logo.js';
 import Slogan from './Slogan.js';
-import Spinning from './Spinning.js';
+import Slider from './Slider.js';
+
+import Background from './Images/Background.png';
 
 function App() {
   return (
     <Wrapper>
+      
       <Logo />
       <Slogan /> 
       <Contact />
-      <Spinning />
+      <Slider />
     </Wrapper>
   );
 }
@@ -26,9 +27,9 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-position: bottom;
-
+  background-position: center center;
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+  position: relative;
+`;
